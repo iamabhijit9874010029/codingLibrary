@@ -1,0 +1,39 @@
+<html lang="en">
+<%- include("./partials/head.ejs") %>
+
+<body>
+  <%- include("./partials/nav.ejs") %>
+
+  <div class="details content px-5">
+    <h1>Problem:</h1>
+    <h2><%= code.name%></h2>
+    <div class="content">
+      <p><span>Name of the Problem: </span><pre><%= code.name %></pre></p>
+      <p><span>Topic: </span><pre><%= code.topic %></pre></p>
+      <p><span>Problem Description: </span><pre><%= code.problemDescription %></pre></p>
+      <p><span>Problem Constraints: </span><pre><%= code.problemConstraints %></pre></p>
+      <p><span>Input Format: </span><pre><%= code.inputFormat %></pre></p>
+      <p><span>Output Format: </span><pre><%= code.outputFormat %></pre></p>
+      <p><span>Example Input1: </span><pre><%= code.exampleInput1 %></pre></p>
+      <p><span>Example Input2: </span><pre><%= code.exampleInput2 %></pre></p>
+      <p><span>Example Output1: </span><pre><%= code.exampleOutput1 %></pre></p>
+      <p><span>Example Output2: </span><pre><%= code.exampleOutput2 %></pre></p>
+      <p><span>Example Explanation1: </span><pre><%= code.exampleExplanation1 %></pre></p>
+      <p><span>Example Explanation2: </span><pre><%= code.exampleExplanation2 %></pre></p>
+      <p><span>Code: </span><pre><b><%= code.code %></b></pre></p>
+    </div>
+  </div>
+
+
+ <div class="operation-btn">
+   <br>
+   <form action="/codes/<%= code.name %>" method="post">
+    <button type="submit" disabled>Remove</button>
+  </form>
+   <form action="/edit/<%= code.name %>/<%= action %>" method="edit">
+    <button type="submit">Update</button>
+  </form>
+ </div>
+  <%- include("./partials/footer.ejs") %>
+</body>
+</html>

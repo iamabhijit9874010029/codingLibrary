@@ -1,0 +1,57 @@
+<html lang="en">
+<%- include("./partials/head.ejs") %>
+
+<head>
+  <!-- Include DataTables CSS -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css">
+
+  <!-- Include jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- Include DataTables JS -->
+  <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+</head>
+
+<body>
+  <!-- Your existing code here -->
+  <%- include("./partials/nav.ejs") %>
+
+  <div class="blogs content px-5">
+    <h2>All Codes</h2>
+
+    <!-- Add an ID to the table for initialization -->
+    <table id="codesTable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Topic</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% if (codes.length > 0) { %>
+          <% codes.forEach(eachcode => { %>
+            <tr>
+              <td><a href="/codes/<%= eachcode.id %>"><%= eachcode.name %></a></td>
+              <td><%= eachcode.topic %></td>
+            </tr>
+          <% }) %>
+        <% } else { %>
+          <tr>
+            <td colspan="2">There are no codes to display...</td>
+          </tr>
+        <% } %>
+      </tbody>
+    </table>
+
+  </div>
+
+  <!-- Initialize DataTables on your table -->
+  <script>
+    $(document).ready(function () {
+      $('#codesTable').DataTable();
+    });
+  </script>
+
+  <%- include("./partials/footer.ejs") %>
+</body>
+</html>

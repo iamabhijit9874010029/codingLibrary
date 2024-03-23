@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "clipboard.js": "^1.0.1",
+    "clipboardy": "^4.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.3",
+    "mongoose": "^6.2.10",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.15"
+  }
+}

@@ -1,0 +1,43 @@
+<html lang="en">
+<%- include("./partials/head.ejs") %>
+
+<body>
+  <%- include("./partials/nav.ejs") %>
+
+  <h2>Edit-Code</h2>
+
+  <div class="create-blog content">
+    <form action="/edit/<%= code.id %>" method="POST">
+      <label for="name">Problem Name:</label>
+      <input type="text" value="<%= code.name %>" id="title" name="name" required>
+      <label for="topic">Topic:</label>
+      <input type="text" value="<%= code.topic %>" id="topic" name="topic" required>
+      <label for="problemDescription">Problem Description:</label>
+      <textarea id="problemDescription" name="problemDescription" id="problemDescription" required><%= code.problemDescription %></textarea>
+      <label for="problemConstraints">Problem Constraints:</label>
+      <textarea id="problemConstraints" name="problemConstraints" id="problemConstraints" required><%= code.problemConstraints %></textarea>
+      <label for="inputFormat">Input Format:</label>
+      <textarea id="inputFormat" name="inputFormat" id="inputFormat" required><%= code.inputFormat %></textarea>
+      <label for="outputFormat">Output Format:</label>
+      <textarea id="outputFormat" name="outputFormat" id="outputFormat" required><%= code.outputFormat %></textarea>
+      <label for="exampleInput1">Example Input1:</label>
+      <textarea id="exampleInput1" name="exampleInput1" id="exampleInput1" required><%= code.exampleInput1 %></textarea>
+      <label for="exampleInput2">Example Input2:</label>
+      <textarea id="exampleInput2" name="exampleInput2" id="exampleInput2" required><%= code.exampleInput2 %></textarea>
+      <label for="exampleOutput1">Example Output1:</label>
+      <textarea id="exampleOutput1" name="exampleOutput1" id="exampleOutput1" required><%= code.exampleOutput1 %></textarea>
+      <label for="exampleOutput2">Example Output2:</label>
+      <textarea id="exampleOutput2" name="exampleOutput2" id="exampleOutput2" required><%= code.exampleOutput2 %></textarea>
+      <label for="exampleExplanation1">Example Explanation1:</label>
+      <textarea id="exampleExplanation1" name="exampleExplanation1" id="exampleExplanation1" required><%= code.exampleExplanation1 %></textarea>
+      <label for="exampleExplanation2">Example Explanation2:</label>
+      <textarea id="exampleExplanation2" name="exampleExplanation2" id="exampleExplanation2"><%= code.exampleExplanation2 %></textarea>
+      <label for="code">Code:</label>
+      <textarea id="code" name="code" id="code" required><%= code.code %></textarea>
+      <button type="submit">Update</button>
+    </form>
+  </div>
+
+  <%- include("./partials/footer.ejs") %>"
+</body>
+</html>

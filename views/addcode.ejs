@@ -1,0 +1,43 @@
+<html lang="en">
+<%- include("./partials/head.ejs") %>
+
+<body>
+  <%- include("./partials/nav.ejs") %>
+
+  <div class="create-blog content px-5">
+    <form action="/code/create" method="POST">
+      <label for="name">Name of the Problem:</label>
+      <input type="text" id="name" name="name" required>
+      <label for="topic">topic:</label>
+      <input type="text" value="none" id="topic" name="topic" required>
+      <label for="problemDescription">Problem Description:</label>
+      <textarea id="problemDescription" name="problemDescription" id="problemDescription" required>none</textarea>
+      <label for="problemConstraints">Problem Constraints:</label>
+      <textarea id="problemConstraints" name="problemConstraints" id="problemConstraints" required>none</textarea>
+      <label for="inputFormat">Input Format:</label>
+      <textarea id="inputFormat" name="inputFormat" id="inputFormat" required>none</textarea>
+      <label for="outputFormat">Output Format:</label>
+      <textarea id="outputFormat" name="outputFormat" id="outputFormat" required>none</textarea>
+      <label for="exampleInput1">Example Input1:</label>
+      <textarea id="exampleInput1" name="exampleInput1" id="exampleInput1" required>none</textarea>
+      <label for="exampleInput2">Example Input2:</label>
+      <textarea id="exampleInput2" name="exampleInput2" id="exampleInput2" required>none</textarea>
+      <label for="exampleOutput1">Example Output1:</label>
+      <textarea id="exampleOutput1" name="exampleOutput1" id="exampleOutput1" required>none</textarea>
+      <label for="exampleOutput2">Example Output2:</label>
+      <textarea id="exampleOutput2" name="exampleOutput2" id="exampleOutput2" required>none</textarea>
+      <label for="exampleExplanation1">Example Explanation1:</label>
+      <textarea id="exampleExplanation1" name="exampleExplanation1" id="exampleExplanation1" required>none</textarea>
+      <label for="exampleExplanation2">Example Explanation2:</label>
+      <textarea id="exampleExplanation2" name="exampleExplanation2" id="exampleExplanation2">none</textarea>
+      <label for="code">Code:</label>
+      <textarea id="code" name="code" id="code" required>none</textarea>
+     <div class="sub">
+      <button type="submit">Submit</button>
+     </div> 
+    </form>
+  </div>
+
+  <%- include("./partials/footer.ejs") %>
+</body>
+</html>

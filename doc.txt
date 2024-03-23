@@ -1,0 +1,3 @@
+database name = test
+table name = users
+database connection string for mongodb = mongodb://localhost:27017
